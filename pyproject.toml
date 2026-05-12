@@ -8,7 +8,7 @@ version = "0.1.0"
 description = "Open-source RAG reliability layer that detects and prevents LLM hallucinations"
 readme = "README.md"
 license = { text = "MIT" }
-authors = [{ name = "Heera Dhanvantri", email = "heeradhanvantri99@gmail.com" }]
+authors = [{ name = "Heera Dhanvantri", email = "heeradevidhanvantri@gmail.com" }]
 keywords = ["llm", "hallucination", "rag", "reliability", "nlp", "ai"]
 classifiers = [
     "Development Status :: 3 - Alpha",
@@ -51,9 +51,9 @@ dev = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/heeradhanvantri99/llm-hallucination-guard"
-Repository = "https://github.com/heeradhanvantri99/llm-hallucination-guard"
-"Bug Tracker" = "https://github.com/heeradhanvantri99/llm-hallucination-guard/issues"
+Homepage = "https://github.com/heeradevidhanvantri/llm-hallucination-guard"
+Repository = "https://github.com/heeradevidhanvantri/llm-hallucination-guard"
+"Bug Tracker" = "https://github.com/heeradevidhanvantri/llm-hallucination-guard/issues"
 
 [tool.setuptools.packages.find]
 where = ["."]
