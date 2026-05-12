@@ -1,7 +1,7 @@
 from __future__ import annotations
 
-import re
 import math
+import re
 from collections import Counter
 
 
