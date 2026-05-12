@@ -150,5 +150,5 @@ class HallucinationGuard:
         if not context:
             return []
         if isinstance(context[0], str):
-            return [Document(content=c) for c in context]  # type: ignore[arg-type]
-        return list(context)  # type: ignore[arg-type]
+            return [Document(content=str(c)) for c in context]
+        return [d for d in context if isinstance(d, Document)]
