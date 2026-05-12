@@ -1,11 +1,10 @@
-import pytest
 from hallucination_guard.utils import (
+    best_context_similarity,
     clamp,
     jaccard_similarity,
     split_sentences,
-    tokenize,
     tfidf_cosine_similarity,
-    best_context_similarity,
+    tokenize,
 )
 
 
