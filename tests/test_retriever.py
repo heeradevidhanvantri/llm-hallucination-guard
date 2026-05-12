@@ -1,7 +1,5 @@
-import pytest
 from hallucination_guard.models import Document
 from hallucination_guard.retrievers import SimpleRetriever
-
 
 DOCS = [
     Document(content="Paris is the capital of France.", doc_id="d1"),
