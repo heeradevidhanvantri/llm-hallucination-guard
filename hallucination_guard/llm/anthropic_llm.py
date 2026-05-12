@@ -34,7 +34,8 @@ class AnthropicLLM(BaseLLM):
             max_tokens=max_tokens,
             messages=[{"role": "user", "content": prompt}],
         )
-        return message.content[0].text  # type: ignore[index]
+        block = message.content[0]
+        return str(block.text) if hasattr(block, "text") else ""
 
     def model_name(self) -> str:
         return self._model
