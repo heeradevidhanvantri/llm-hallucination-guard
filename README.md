@@ -3,8 +3,7 @@
 **Open-source RAG reliability layer that detects and prevents LLM hallucinations.**
 
 [![CI](https://github.com/heeradevidhanvantri/llm-hallucination-guard/actions/workflows/ci.yml/badge.svg)](https://github.com/heeradevidhanvantri/llm-hallucination-guard/actions)
-[![PyPI](https://img.shields.io/pypi/v/llm-hallucination-guard)](https://pypi.org/project/llm-hallucination-guard/)
-[![Python](https://img.shields.io/pypi/pyversions/llm-hallucination-guard)](https://pypi.org/project/llm-hallucination-guard/)
+[![Python](https://img.shields.io/badge/python-3.9%2B-blue)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 ---
