@@ -1,6 +1,6 @@
 import pytest
-from hallucination_guard import HallucinationGuard, GuardConfig, Document, HallucinationType
 
+from hallucination_guard import Document, GuardConfig, HallucinationGuard, HallucinationType
 
 CONTEXT_STRINGS = [
     "Paris is the capital and most populous city of France.",
