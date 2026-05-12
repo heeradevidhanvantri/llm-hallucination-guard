@@ -32,8 +32,8 @@ class GroundingChecker(BaseChecker):
 
         if use_semantic:
             try:
-                from sentence_transformers import SentenceTransformer
                 import numpy as np  # noqa: F401
+                from sentence_transformers import SentenceTransformer
                 self._encoder = SentenceTransformer(semantic_model)
             except ImportError:
                 pass  # silently fall back to TF-IDF
