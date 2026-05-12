@@ -45,7 +45,8 @@ class TestHallucinationGuard:
         result = self.guard.check(
             query="q", response="The sky is blue.", context=[]
         )
-        assert result.is_hallucination  # no context → low grounding → flagged
+        assert result.grounding_score == 0.0  # no context → zero grounding score
+        assert result.checker_scores["grounding"] == 0.0
 
     def test_convenience_method(self):
         flag = self.guard.is_hallucination(
