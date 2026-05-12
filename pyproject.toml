@@ -1,0 +1,76 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.backends.legacy:build"
+
+[project]
+name = "llm-hallucination-guard"
+version = "0.1.0"
+description = "Open-source RAG reliability layer that detects and prevents LLM hallucinations"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Heera Dhanvantri", email = "heeradhanvantri99@gmail.com" }]
+keywords = ["llm", "hallucination", "rag", "reliability", "nlp", "ai"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+requires-python = ">=3.9"
+dependencies = [
+    "pydantic>=2.0",
+    "httpx>=0.24",
+    "tenacity>=8.0",
+    "numpy>=1.24",
+]
+
+[project.optional-dependencies]
+anthropic = ["anthropic>=0.30"]
+openai = ["openai>=1.0"]
+semantic = ["sentence-transformers>=2.2"]
+all = [
+    "anthropic>=0.30",
+    "openai>=1.0",
+    "sentence-transformers>=2.2",
+]
+dev = [
+    "pytest>=7.0",
+    "pytest-asyncio>=0.21",
+    "pytest-cov>=4.0",
+    "ruff>=0.4",
+    "mypy>=1.8",
+    "anthropic>=0.30",
+    "openai>=1.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/heeradhanvantri99/llm-hallucination-guard"
+Repository = "https://github.com/heeradhanvantri99/llm-hallucination-guard"
+"Bug Tracker" = "https://github.com/heeradhanvantri99/llm-hallucination-guard/issues"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["hallucination_guard*"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py39"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP"]
+
+[tool.mypy]
+python_version = "3.9"
+strict = true
+ignore_missing_imports = true
