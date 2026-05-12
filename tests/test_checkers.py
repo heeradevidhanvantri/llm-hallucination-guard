@@ -1,9 +1,7 @@
-import pytest
-from hallucination_guard.checkers.grounding import GroundingChecker
-from hallucination_guard.checkers.contradiction import ContradictionChecker
 from hallucination_guard.checkers.citation import CitationChecker
+from hallucination_guard.checkers.contradiction import ContradictionChecker
+from hallucination_guard.checkers.grounding import GroundingChecker
 from hallucination_guard.models import Document
-
 
 CONTEXT = [
     Document(content="Paris is the capital and most populous city of France."),
@@ -110,7 +108,10 @@ class TestCitationChecker:
     def test_quoted_claim_verified(self):
         result = self.checker.check(
             query="q",
-            response='According to the source, "Paris is the capital and most populous city of France."',
+            response=(
+                'According to the source, '
+                '"Paris is the capital and most populous city of France."'
+            ),
             context=CONTEXT,
         )
         citations = result.details.get("citations", [])
